@@ -1,6 +1,9 @@
 .vscode/
 .zed/
 
+# Local debug script
+/local-debug.sh
+
 # macOS
 .DS_Store
 
