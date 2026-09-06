@@ -870,7 +870,11 @@ static int mcast_source_receive_batch(mcast_source_t *source, int fd, int64_t no
       if (errno == ENOSYS || errno == EOPNOTSUPP) {
         unavailable = 1;
         fallback = -1;
-      } else if (errno != EAGAIN && errno != EWOULDBLOCK) {
+      } else if (errno != EAGAIN
+#if EWOULDBLOCK != EAGAIN
+                 && errno != EWOULDBLOCK
+#endif
+      ) {
         logger(LOG_ERROR, "Multicast: Batch receive failed: %s", strerror(errno));
         source->failed = 1;
       }
@@ -928,7 +932,11 @@ static int mcast_source_receive(mcast_source_t *source, int fd, int64_t now) {
       int recv_errno = errno;
       if (recv_errno == EINTR)
         continue;
-      if (recv_errno != EAGAIN && recv_errno != EWOULDBLOCK) {
+      if (recv_errno != EAGAIN
+#if EWOULDBLOCK != EAGAIN
+          && recv_errno != EWOULDBLOCK
+#endif
+      ) {
         logger(LOG_ERROR, "Multicast: Receive failed: %s", strerror(recv_errno));
         source->failed = 1;
       }
