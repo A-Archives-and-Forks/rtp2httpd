@@ -12,7 +12,7 @@
 
 | 程序 | 测试版本 |
 | --- | --- |
-| rtp2httpd | [`b4fd92a6`](https://github.com/stackia/rtp2httpd/commit/b4fd92a6c49bd720e730aedd62cd10faeeca791f) |
+| rtp2httpd | [v3.17.0-beta.1](https://github.com/stackia/rtp2httpd/releases/tag/v3.17.0-beta.1) |
 | msd_lite | [`fa68e131`](https://github.com/rozhuk-im/msd_lite/commit/fa68e131343fb58c67ad77b2d26f2cb7c49a2c95)，2026-07-20；liblcb `e2f420a2` |
 | udpxy | [`31d4bcfa`](https://github.com/pcherenkov/udpxy/commit/31d4bcfabaade59d3efdee015df7979febf76bae)，2026-04-13 |
 | TVGate | [v3.2.0](https://github.com/qist/tvgate/releases/tag/v3.2.0)，2026-09-06 |
